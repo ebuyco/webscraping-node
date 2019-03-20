@@ -11,6 +11,8 @@ import './lib/cron';
 const app = express();
 console.log(db);
 //  const PORT = process.env.PORT || 2132;
+
+// load the cors package
 app.use(cors());
 
 app.get('/scrape', async (req, res, next) => {
@@ -30,7 +32,10 @@ app.get('/data', async (req, res, next) => {
   const { twitter, instagram } = db.value();
 
   // filter unique values goes here
-  
+  const uniqueTwitter = twitter.reduce((acc, scrape) => {
+    // check if this on already on acumulator
+
+  }, [])
 
   // respond with json
   res.json({ twitter, instagram });

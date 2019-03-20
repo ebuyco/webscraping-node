@@ -1,5 +1,6 @@
 {
   "name": "scrape_city",
+  "homepage": "https://github.com/ebuyco/webscraping-node",
   "version": "1.0.0",
   "description": "nodejs with twitter and instagram getting the exact followers no api calls",
   "main": "index.js",
