@@ -33,12 +33,17 @@ app.get('/data', async (req, res, next) => {
 
   // filter unique values goes here
   const uniqueTwitter = twitter.reduce((acc, scrape) => {
+
     // check if this on already on acumulator
+    if(!acc.fin(el => el.count === scrape.count )){
+        return[...acc, scrape];
+    }
+    return acc;
 
   }, [])
 
   // respond with json
-  res.json({ twitter, instagram });
+  res.json({ uniqueTwitter, twitter, instagram });
 });
 
 // app.listen(PORT, () => {
