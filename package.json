@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "next",
     "dev": "node -r esm index.js",
-    "serve": "nodemon -r esm index.js --ignore db.json"
+    "serve": "nodemon -r esm index.js --ignore db.json",
+    "frontEnd": "next",
+    "backEnd": "nodemon -r esm index.js --ignore db.json"
   },
   "author": "Ernie Buyco",
   "license": "ISC",
@@ -28,6 +30,7 @@
     "node-cron": "^2.0.3",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "recharts": "^1.5.0",
     "waait": "^1.0.4"
   },
   "devDependencies": {

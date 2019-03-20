@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import {uniqueCount} from './lib/utils';
 import {
   getInstagramCount,
   getTwitterCount
@@ -32,18 +33,11 @@ app.get('/data', async (req, res, next) => {
   const { twitter, instagram } = db.value();
 
   // filter unique values goes here
-  const uniqueTwitter = twitter.reduce((acc, scrape) => {
-
-    // check if this on already on acumulator
-    if(!acc.fin(el => el.count === scrape.count )){
-        return[...acc, scrape];
-    }
-    return acc;
-
-  }, [])
+  const uniqueTwitter = uniqueCount(twitter);
+  const uniqueInstagram= uniqueCount(instagram); 
 
   // respond with json
-  res.json({ uniqueTwitter, twitter, instagram });
+  res.json({ twitter: uniqueTwitter,instagram : uniqueInstagram });
 });
 
 // app.listen(PORT, () => {
