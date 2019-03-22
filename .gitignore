@@ -26,6 +26,7 @@ yarn-error.log*
 # package.json
 package-lock.json
 .idea
+.next
 run.sh
 /build
 /coverage
@@ -38,3 +39,6 @@ settings.json
 yarn.lock
 yarn-error.log
 .editorconfig
+
+
+

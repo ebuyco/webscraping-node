@@ -18,9 +18,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/index.js");
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/index.js");
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(date_fns__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/index.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(date_fns__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/index.js");
 
 
 
@@ -31,42 +31,6 @@ var _jsxFileName = "/Users/ernie/Projects/wesbos/webscraping-node/components/Cha
 
 
 
-var data = [{
-  name: 'Page A',
-  uv: 4000,
-  pv: 2400,
-  amt: 2400
-}, {
-  name: 'Page B',
-  uv: 3000,
-  pv: 1398,
-  amt: 2210
-}, {
-  name: 'Page C',
-  uv: 2000,
-  pv: 9800,
-  amt: 2290
-}, {
-  name: 'Page D',
-  uv: 2780,
-  pv: 3908,
-  amt: 2000
-}, {
-  name: 'Page E',
-  uv: 1890,
-  pv: 4800,
-  amt: 2181
-}, {
-  name: 'Page F',
-  uv: 2390,
-  pv: 3800,
-  amt: 2500
-}, {
-  name: 'Page G',
-  uv: 3490,
-  pv: 4300,
-  amt: 2100
-}];
 
 var Example =
 /*#__PURE__*/
@@ -84,12 +48,13 @@ function (_PureComponent) {
     value: function render() {
       var scrapesWithDates = this.props.scrapes.map(function (scrape) {
         return Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, scrape, {
-          date: Object(date_fns__WEBPACK_IMPORTED_MODULE_8__["distanceInWords"])(new Date(scrape.date), new Date())
+          date: Object(date_fns__WEBPACK_IMPORTED_MODULE_7__["distanceInWords"])(new Date(scrape.date), new Date())
         });
       });
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_7__["LineChart"], {
-        width: 1000,
-        height: 500,
+      console.log(scrapesWithDates);
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__["LineChart"], {
+        width: 800,
+        height: 600,
         data: scrapesWithDates,
         margin: {
           top: 5,
@@ -99,43 +64,43 @@ function (_PureComponent) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 22
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_7__["CartesianGrid"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__["CartesianGrid"], {
         strokeDasharray: "3 3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 33
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_7__["XAxis"], {
-        dataKey: "name",
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__["XAxis"], {
+        dataKey: "date",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 34
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_7__["YAxis"], {
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__["YAxis"], {
         domain: ['dataMin', 'dataMax'],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 35
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_7__["Tooltip"], {
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__["Tooltip"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 36
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_7__["Legend"], {
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__["Legend"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 37
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_7__["Line"], {
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__["Line"], {
         type: "monotone",
         dataKey: "count",
         stroke: "#8884d8",
@@ -144,7 +109,7 @@ function (_PureComponent) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 38
         },
         __self: this
       }));
